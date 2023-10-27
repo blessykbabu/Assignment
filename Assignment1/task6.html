@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task6</title>
+</head>
+
+<body>
+    <form>
+
+        <label for="message" name="s">Data</label>
+        <textarea id="message" cols="50" rows="5"></textarea>
+        <input type="button" value="Display" id="b1" onclick="act()">
+
+    </form>
+    <script>
+        function act() {
+            // const data = document.getElementById('message');
+            // data.innerHTML=value.message;
+            // var obj = JSON.parse(data);
+            // // var details = JSON.stringify(obj);
+            // document.getElementById('message').value; 
+            // console.log(data)
+
+            var data = document.getElementById('message').value;
+            var obj = JSON.parse(data);
+            var dis = JSON.stringify(obj,undefined,1);
+            document.getElementById('message').value = dis;
+        }
+    </script>
+    <!-- <textarea id="t1"></textarea> -->
+</body>
+
+</html>
